@@ -1,0 +1,24 @@
+.line {
+    display: flex;
+}
+
+.gri {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+#position1 {
+    text-align: center;
+    display: flex;
+}
+
+.position {
+    flex-direction: column;
+}
+
+#posi {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}

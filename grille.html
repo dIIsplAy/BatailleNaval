@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="grille.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Grille</title>
+</head>
+
+<body>
+
+
+    <section id="posi">
+        <div class="gri"></div>
+        <div class="gri">A</div>
+        <div class="gri">B</div>
+        <div class="gri">C</div>
+        <div class="gri">D</div>
+        <div class="gri">E</div>
+        <div class="gri">F</div>
+        <div class="gri">G</div>
+        <div class="gri">H</div>
+        <div class="gri">I</div>
+        <div class="gri">J</div>
+    </section>
+    <div id="position1">
+        <section class="position">
+            <div class="gri">1</div>
+            <div class="gri">2</div>
+            <div class="gri">3</div>
+            <div class="gri">4</div>
+            <div class="gri">5</div>
+            <div class="gri">6</div>
+            <div class="gri">7</div>
+            <div class="gri">8</div>
+            <div class="gri">9</div>
+            <div class="gri">10</div>
+        </section>
+        <div id="grille"></div>
+
+    </div>
+    <script>
+        for (let i = 0; i < 10; i++) {
+            let line = document.createElement('div');
+            document.querySelector('#grille').appendChild(line);
+            for (let a = 0; a < 10; a++) {
+                let cellule = document.createElement('div');
+                cellule.style.height = '40px';
+                cellule.style.width = '40px';
+                cellule.style.border = '1px solid black';
+                line.className = 'line';
+                line.appendChild(cellule);
+
+                cellule.addEventListener('click', function() {
+                    cellule.style.backgroundColor = 'blue';
+
+                });
+            }
+
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
