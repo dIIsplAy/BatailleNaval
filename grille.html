@@ -43,21 +43,26 @@
 
     </div>
     <script>
+        let grillejoeur = [];
         for (let i = 0; i < 10; i++) {
+            grillejoeur[i] = [];
             let line = document.createElement('div');
             document.querySelector('#grille').appendChild(line);
             for (let a = 0; a < 10; a++) {
+
                 let cellule = document.createElement('div');
                 cellule.style.height = '40px';
                 cellule.style.width = '40px';
                 cellule.style.border = '1px solid black';
                 line.className = 'line';
-                line.appendChild(cellule);
+                grillejoeur[i][a] = cellule;
+                line.appendChild(grillejoeur[i][a]);
 
-                cellule.addEventListener('click', function() {
-                    cellule.style.backgroundColor = 'blue';
-
+                grillejoeur[i][a].addEventListener('click', function() {
+                    grillejoeur[i][a].style.backgroundColor = 'blue';
+                    console.log(i + ',' + a);
                 });
+
             }
 
         }
